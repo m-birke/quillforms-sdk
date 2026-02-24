@@ -1,0 +1,6 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: '1.2'
+_src_path: https://github.com/m-birke/python-project-template.git
+package_name: quillforms_sdk
+project_description: Data access layer for quillforms
+project_name: quillforms-sdk
