@@ -9,7 +9,9 @@
 
 -----
 
-Data access layer for quillforms
+Data access layer for [quillforms](https://quillforms.com/)
+
+This lib is opinionated in way, that it expects person related forms with a least a question for a mail address. Anyway there are domain agnostics functions as well.
 
 ## Table of Contents
 
@@ -19,7 +21,7 @@ Data access layer for quillforms
 ## Usage
 
 ```python
-# TODO
+from quillforms_sdk.quillforms_sdk import ...
 ```
 
 ## License

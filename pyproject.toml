@@ -11,7 +11,9 @@ requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
 keywords = [
-  # TODO
+  "quillforms",
+  "SQL",
+  "wordpress",
 ]
 authors = [
   { name = "m-birke", email = "wesci@web.de" },
@@ -30,7 +32,8 @@ classifiers = [
   "Operating System :: POSIX :: Linux",
 ]
 dependencies = [
-  # TODO
+  "mysql-connector-python>=9.6.0",
+  "sqlalchemy>=2.0.46",
 ]
 
 [project.urls]
@@ -118,6 +121,8 @@ ignore = [
   "S105", "S106", "S107",
   # Ignore complexity
   "C901", "PLR0911", "PLR0912", "PLR0913", "PLR0915",
+  # Allow docstrings to be longer
+  "E501",
 ]
 unfixable = [
   # Don't touch unused imports
@@ -134,10 +139,8 @@ ban-relative-imports = "all"
 # Tests can use magic values, assertions, and relative imports
 "tests/**/*" = ["PLR2004", "S101", "TID252"]
 
-#[[tool.mypy.overrides]]
-#module = [
-#]
-#follow_untyped_imports = true
+[tool.mypy]
+follow_untyped_imports = true
 #ignore_missing_imports = true
 
 [tool.coverage.run]
